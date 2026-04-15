@@ -1096,12 +1096,15 @@ export default function App() {
               </p>
             </div>
             
-            <button 
+            <a
+              href="https://alfabank.ru/_example/sme/payservice/acquiring/?preview=019d918b-98d5-7fef-a50b-9fb4bc15c3b5#Open-Account"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#ef3124] hover:bg-[#d42a1e] text-[rgba(255,255,255,0.94)] font-['SF_Pro_Text',sans-serif] font-medium text-[16px] leading-6 px-5 py-1 rounded-lg transition-colors cursor-pointer w-full min-h-[48px] flex items-center justify-center"
               onClick={handleConnect}
             >
               Подключить эквайринг
-            </button>
+            </a>
           </div>
         </div>
         </div>
