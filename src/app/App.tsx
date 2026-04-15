@@ -611,7 +611,11 @@ export default function App() {
   
   // Handle connect button click with confetti
   const handleConnect = () => {
-    window.location.href = 'https://alfabank.ru/_example/sme/payservice/acquiring/#Open-Account';
+    window.open(
+      'https://alfabank.ru/_example/sme/payservice/acquiring/#Open-Account',
+      '_blank',
+      'noopener,noreferrer'
+    );
 
     // Fire confetti from multiple angles
     const duration = 3000;
