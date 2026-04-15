@@ -644,8 +644,12 @@ export default function App() {
   };
   
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-8">
-      <div className="bg-[#f2f3f5] rounded-[32px] p-2 flex gap-2 w-[1140px]">
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="w-[1140px] flex flex-col">
+        <h1 className="mb-10 max-w-[751px] grow shrink-0 basis-0 font-['SF_Pro_Display',sans-serif] text-[40px] font-bold leading-[48px] text-[rgba(3,3,6,0.88)]">
+          Подберите выгодный тариф
+        </h1>
+        <div className="bg-[#f2f3f5] rounded-[32px] p-2 flex gap-2 w-[1140px]">
         {/* Left Panel - Calculator */}
         <div className="bg-[#f2f3f5] rounded-3xl p-6 w-[768px]">
           {/* Title */}
@@ -1099,6 +1103,7 @@ export default function App() {
               Подключить эквайринг
             </button>
           </div>
+        </div>
         </div>
       </div>
     </div>
