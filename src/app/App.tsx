@@ -407,6 +407,12 @@ export default function App() {
   // Sort tariffs by price from lowest to highest
   const sortedTariffs = useMemo(() => {
     return [...availableTariffs].sort((a, b) => {
+      // Keep industry tariff as the first card for specific sectors
+      if (businessSector !== 'Для всех отраслей') {
+        if (a.id === 'industry') return -1;
+        if (b.id === 'industry') return 1;
+      }
+
       const priceA = calculateTariffPrice(a);
       const priceB = calculateTariffPrice(b);
       if (priceA !== priceB) {
@@ -415,7 +421,7 @@ export default function App() {
       // If prices are equal, sort by ID for stability
       return a.id.localeCompare(b.id);
     });
-  }, [turnover, terminals, instantDeposit, availableTariffs]);
+  }, [turnover, terminals, instantDeposit, availableTariffs, businessSector]);
   
   const maxVisibleTariffs = 4;
   const canScrollLeft = tariffScrollIndex > 0;
